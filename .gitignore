@@ -1,7 +1,7 @@
 end/
-
 *.iml
 *.idea
+*lib
 
 # Logs
 logs
