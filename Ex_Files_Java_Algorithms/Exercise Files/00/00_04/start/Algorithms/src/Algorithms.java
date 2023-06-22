@@ -1,17 +1,15 @@
 public class Algorithms {
 
     public static int findMaximum(int a, int b, int c) {
-        if (a > b) {
-            if (a > c || a == c) {
-                return a;
-            }
+        int maxNum = a;
+        if (b > maxNum) {
+            maxNum = b;
         }
 
-        if (b > c) {
-            return b;
+        if (c > maxNum) {
+            maxNum = c;
         }
-
-        return c;
+        return maxNum;
     }
 
     public static void main(String[] args) {
