@@ -1,10 +1,26 @@
 public class Algorithms {
 
     public static String reverseEachWord(String s) {
-        return s;
+        if (s == null || s.isEmpty() || s.isBlank()) {
+            return s;
+        }
+
+        String[] words = s.split(" ");
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < words.length ; i++) {
+            sb.append(reverse(words[i]));
+            if (i != words.length-1) {
+                sb.append(" ");
+            }
+        }
+        return sb.toString();
     }
 
     public static String reverse(String s) {
+        if (s == null || s.isEmpty() || s.isBlank()) {
+            return s;
+        }
         return new StringBuilder(s).reverse().toString();
     }
 
