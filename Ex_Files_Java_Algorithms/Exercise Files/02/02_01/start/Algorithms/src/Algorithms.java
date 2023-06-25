@@ -1,6 +1,14 @@
 public class Algorithms {
 
     public static boolean linearSearch(int[] arr, int item) {
+        if (arr.length == 0) {
+            return false;
+        }
+        for (int curr: arr) {
+            if (curr == item) {
+                return true;
+            }
+        }
         return false;
     }
 
