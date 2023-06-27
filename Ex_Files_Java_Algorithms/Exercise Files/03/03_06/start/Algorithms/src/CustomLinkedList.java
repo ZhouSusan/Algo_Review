@@ -10,4 +10,25 @@ public class CustomLinkedList {
         }
         System.out.println();
     }
+
+    public int length() {
+        int size = 0;
+        if (isEmpty()) {
+            return size;
+        }
+
+        Node current = head;
+        while (current != null) {
+            size += 1;
+            current = current.next;
+        }
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+    public void deleteKthNode() {
+
+    }
 }
