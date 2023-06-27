@@ -14,5 +14,10 @@ public class Algorithms {
         thirdNode.next = fourthNode;
 
         linkedList.displayContents();
+        System.out.printf("The size of length %s\n", linkedList.length());
+        System.out.printf("Is this list empty: %s\n", linkedList.isEmpty());
+
+        linkedList.deleteKthNodeFromEnd(2);
+        linkedList.displayContents();
     }
 }

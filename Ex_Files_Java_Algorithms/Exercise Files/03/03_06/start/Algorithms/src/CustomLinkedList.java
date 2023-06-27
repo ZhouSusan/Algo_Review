@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class CustomLinkedList {
 
     Node head;
@@ -28,7 +30,30 @@ public class CustomLinkedList {
     public boolean isEmpty() {
         return head == null;
     }
-    public void deleteKthNode() {
+    public void deleteKthNodeFromEnd(int k) {
+        if (isEmpty() || k == 0) {
+            return;
+        }
 
+        Node first = head;
+        Node second = head;
+
+        for (int i = 0; i < k; i++) {
+            second = second.next; // increment second pointer until we reached kth item
+            if (second.next==null) {
+                // K >= length of ths list
+                if (i == k - 1) {
+                    head = head.next;
+                }
+                return;
+            }
+        }
+
+        while (second.next != null) {
+            first = first.next;
+            second = second.next;
+        }
+
+        first.next = first.next.next;
     }
 }
