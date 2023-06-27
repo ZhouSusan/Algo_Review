@@ -10,7 +10,7 @@ K=1
 
 The first node from the end of the list is 18.
 
-Modified: 5->7->11->2->null```
+Modified: 5->7->11->2->null
 -----------------------------------------------------------
 
 Original: 5->7->11->2->null
