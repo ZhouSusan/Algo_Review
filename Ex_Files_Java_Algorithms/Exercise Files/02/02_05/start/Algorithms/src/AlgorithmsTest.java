@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AlgorithmsTest {
@@ -15,5 +17,20 @@ class AlgorithmsTest {
 
         assertArrayEquals(expectedOne, actualOne);
         assertArrayEquals(expectedTwo, actualTwo);
+    }
+
+    @org.junit.jupiter.api.Test
+    void reverseInPlace() {
+        int[] arrTestCaseOne = { 1, 2, 3, 4, 5, 6 };
+        int[] arrTestCaseTwo = new int[0];
+
+        int[] expectedOne = {6, 5, 4, 3, 2, 1};
+        int[] expectedTwo = {};
+
+        Algorithms.reverseInPlace(arrTestCaseOne);
+        assertArrayEquals(arrTestCaseOne, expectedOne);
+
+        Algorithms.reverseInPlace(arrTestCaseTwo);
+        assertArrayEquals(arrTestCaseTwo, expectedTwo);
     }
 }
