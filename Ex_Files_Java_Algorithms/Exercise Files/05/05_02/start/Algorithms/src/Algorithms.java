@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class Algorithms {
 
     public static void main(String[] args) {
@@ -8,5 +11,26 @@ public class Algorithms {
                 "Marketing");
         Employee employee3 = new Employee("Sally", 2519,
                 "Sales");
+
+        HashMap<Integer, Employee> employeesById = new HashMap<>();
+        employeesById.put(employee.id, employee);
+        employeesById.put(employee2.id, employee2);
+        employeesById.put(employee.id, employee3);
+
+        Employee retrievedEmployee = employeesById.get(9612);
+
+        if (retrievedEmployee != null) {
+            System.out.println(retrievedEmployee.name + " : " + retrievedEmployee.department);
+        }
+
+       System.out.println(employeesById.containsKey(2519));
+
+        HashSet<String> productCodes = new HashSet<>();
+        productCodes.add("2T26B");
+        productCodes.add("9k42P");
+        productCodes.add("H5J781");
+
+        System.out.println(productCodes.contains("H5J781"));
+        System.out.println((productCodes.contains("9KTYP")));
     }
 }
