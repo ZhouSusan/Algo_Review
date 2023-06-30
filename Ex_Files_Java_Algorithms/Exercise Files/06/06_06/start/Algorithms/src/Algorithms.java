@@ -10,5 +10,14 @@ public class Algorithms {
         tree.insert(1);
         tree.insert(3);
         tree.insert(4);
+
+        System.out.println(tree.contains(1));
+        System.out.println(tree.contains(2));
+        System.out.println(tree.contains(3));
+        System.out.println(tree.contains(4));
+        System.out.println(tree.contains(-12));
+        System.out.println(tree.contains(0));
+        System.out.println(tree.contains(9));
+        System.out.println(tree.contains(-3));
     }
 }

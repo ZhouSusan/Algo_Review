@@ -18,4 +18,31 @@ public class BinarySearchTree {
 
         return root;
     }
+
+    public boolean contains(int val) {
+        return contains(this.root, val);
+    }
+
+    private boolean contains(Node root, int val) {
+        if (root == null)
+        {
+            return false;
+        }
+
+        if (root.data == val) {
+            return true;
+        }
+
+        if (val < root.data) {
+            return contains(root.left, val);
+        }
+
+        if (val > root.data) {
+            return contains(root.right, val);
+
+        }
+
+        // value is fine
+        return true;
+    }
 }
