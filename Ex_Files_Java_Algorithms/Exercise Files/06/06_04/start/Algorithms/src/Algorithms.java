@@ -30,5 +30,11 @@ public class Algorithms {
 
         tree.preOrderTraversal();
         System.out.println();
+
+        tree.inOrderTraversal();
+        System.out.println();
+
+        tree.postOrderTraversal();
+        System.out.println();
     }
 }
