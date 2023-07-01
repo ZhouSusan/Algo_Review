@@ -1,5 +1,8 @@
 public class Algorithms {
     public static boolean isPasswordComplex(String s) {
+        if (s == null || s.isEmpty() || s.isBlank()) {
+            return false;
+        }
         return s.chars().anyMatch(Character::isUpperCase) &&
                 s.chars().anyMatch(Character::isLowerCase) &&
                 s.chars().anyMatch(Character::isDigit);

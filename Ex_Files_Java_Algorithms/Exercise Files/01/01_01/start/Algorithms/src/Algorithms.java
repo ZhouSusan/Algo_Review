@@ -2,7 +2,7 @@ public class Algorithms {
 
     // Using the Java Streams API, we'll create a character stream that streams through the characters and checks that every character is uppercase.
     public static boolean isUpperCase(String s) {
-        if (s.length() == 0) {
+        if (s == null || s.isEmpty()) {
             return false;
         }
         return s.chars().allMatch(Character::isUpperCase); // Java Stream Api
@@ -10,7 +10,7 @@ public class Algorithms {
 
     // Using the Java Streams API, we'll create a character stream that streams through the characters and checks that every character is lowercase.
     public static boolean isLowerCase(String s) {
-        if (s.length() == 0) {
+        if (s == null || s.isEmpty()) {
             return false;
         }
         // s.chars().noneMatch(Character::isUpperCase);

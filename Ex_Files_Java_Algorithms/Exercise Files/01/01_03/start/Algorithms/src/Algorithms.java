@@ -1,6 +1,6 @@
 public class Algorithms {
     public static String normalizeString(String str) {
-        if (str.isEmpty()) {
+        if (str == null || str.isEmpty()) {
             return str;
         }
         return str.toLowerCase().trim().replace(",", "");
