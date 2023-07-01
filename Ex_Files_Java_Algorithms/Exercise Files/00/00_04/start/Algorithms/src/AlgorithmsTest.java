@@ -4,7 +4,7 @@ class AlgorithmsTest {
 
     @org.junit.jupiter.api.Test
     void findMaximum() {
-        // Act
+        // Arrange
         int num1 = 4;
         int num2 = 39;
         int num3 = 72;
@@ -17,7 +17,7 @@ class AlgorithmsTest {
         int expected2 = -1;
         int expected3 = 4;
 
-        // Arrange
+        // Act
         int actual1 = Algorithms.findMaximum(num1, num2, num3);
         int actual2 = Algorithms.findMaximum(num4, num5, num7);
         int actual3 = Algorithms.findMaximum(num7, num1, num6);
