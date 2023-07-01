@@ -1,5 +1,8 @@
 public class Algorithms {
     public static String normalizeString(String str) {
+        if (str.isEmpty()) {
+            return str;
+        }
         return str.toLowerCase().trim().replace(",", "");
     }
     public static void main(String[] args) {
