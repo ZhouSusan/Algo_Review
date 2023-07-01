@@ -4,21 +4,23 @@ class AlgorithmsTest {
 
     @org.junit.jupiter.api.Test
     void isPasswordComplex() {
-        // Act
+        // Arrange
         String testCaseOne = "Hell0";
         String testCaseTwo = "Hello";
         String testCaseThree = "hell0";
         String testCaseFour = "HeLLo";
         String testCaseFive = "hello";
         String testCaseSix = " ";
+        String testCaseSeven = "1098234";
 
-        // Arrange
+        // Act
         boolean actualOne = Algorithms.isPasswordComplex(testCaseOne);
         boolean actualTwo = Algorithms.isPasswordComplex(testCaseTwo);
         boolean actualThree = Algorithms.isPasswordComplex(testCaseThree);
         boolean actualFour = Algorithms.isPasswordComplex(testCaseFour);
         boolean actualFive = Algorithms.isPasswordComplex(testCaseFive);
         boolean actualSix = Algorithms.isPasswordComplex(testCaseSix);
+        boolean actualSeven = Algorithms.isPasswordComplex(testCaseSeven);
 
         //Assert
         assertTrue(actualOne);
@@ -27,5 +29,6 @@ class AlgorithmsTest {
         assertFalse(actualFour);
         assertFalse(actualFive);
         assertFalse(actualSix);
+        assertFalse(actualSeven);
     }
 }
