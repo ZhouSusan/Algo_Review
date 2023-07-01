@@ -4,12 +4,12 @@ class AlgorithmsTest {
 
     @org.junit.jupiter.api.Test
     void isAtEvenIndex() {
-        // Act
+        // Arrange
         String testCaseOne = "HeLLo";
         String testCaseTwo = "";
         String testCaseThree = null;
 
-        // Arrange
+        // Act
         boolean actualOne = Algorithms.isAtEvenIndex(testCaseOne, 'L');
         boolean actualTwo = Algorithms.isAtEvenIndex(testCaseOne, 'e');
         boolean actualThree = Algorithms.isAtEvenIndex(testCaseOne, 'T');
