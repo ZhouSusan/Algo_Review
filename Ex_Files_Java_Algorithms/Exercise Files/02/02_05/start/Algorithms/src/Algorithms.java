@@ -3,10 +3,15 @@ import java.util.Arrays;
 public class Algorithms {
 
     public static int[] reverse(int[] arr) {
-        if (arr.length == 0 || arr.length == 1)
+        if (arr == null || arr.length == 0)
         {
+            return new int[0];
+        }
+
+        if (arr.length == 1) {
             return arr;
         }
+
         int[] reversed = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             reversed[i] = arr[arr.length-1-i];
