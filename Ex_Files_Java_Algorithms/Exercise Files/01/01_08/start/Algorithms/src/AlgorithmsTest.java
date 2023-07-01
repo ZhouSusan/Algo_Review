@@ -4,7 +4,7 @@ class AlgorithmsTest {
 
     @org.junit.jupiter.api.Test
     void reverseEachWord() {
-        // Act
+        // Arrange
         String testCaseOne = "sally is a great worker";
         String testCaseTwo = "racer racecar madam";
         String testCaseThree = "what can I do today";
@@ -19,7 +19,7 @@ class AlgorithmsTest {
         String expectedFive = " ";
         String expectedSix = null;
 
-        // Arrange
+        // Act
         String actualOne = Algorithms.reverseEachWord(testCaseOne);
         String actualTwo = Algorithms.reverseEachWord(testCaseTwo);
         String actualThree = Algorithms.reverseEachWord(testCaseThree);

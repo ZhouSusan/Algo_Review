@@ -5,7 +5,7 @@ class AlgorithmsTest {
     @org.junit.jupiter.api.Test
     void reverse() {
 
-        // Act
+        // Arrange
         String testCaseOne = "cheese";
         String testCaseTwo = "World";
         String testCaseThree = "Bears!";
@@ -18,7 +18,7 @@ class AlgorithmsTest {
         String expectedFour = "";
         String expectedFive = null;
 
-        // Arrange
+        // Act
         String actualOne = Algorithms.reverse(testCaseOne);
         String actualTwo = Algorithms.reverse(testCaseTwo);
         String actualThree = Algorithms.reverse(testCaseThree);
