@@ -7,6 +7,11 @@ import static java.util.Arrays.stream;
 public class Algorithms {
 
     public static int[] findEvenNums(int[] arr1, int[] arr2) {
+        if ((arr1 == null && arr2 == null) || (arr1.length == 0 && arr2.length == 0))
+        {
+            return new int[0];
+        }
+
         ArrayList<Integer> result = new ArrayList<>();
         for (int num : arr1) {
             if (num % 2 == 0) {
