@@ -4,6 +4,9 @@ import java.util.OptionalInt;
 public class Algorithms {
 
     public static Integer linearSearch(int[] arr, int item) {
+        if (arr == null || arr.length == 0) {
+            return null;
+        }
         for (int current : arr) {
             if (current == item) {
                 return item;
