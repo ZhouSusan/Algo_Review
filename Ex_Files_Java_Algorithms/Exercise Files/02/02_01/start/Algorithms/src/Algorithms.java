@@ -1,7 +1,7 @@
 public class Algorithms {
 
     public static boolean linearSearch(int[] arr, int item) {
-        if (arr.length == 0) {
+        if (arr == null || arr.length == 0) {
             return false;
         }
         for (int curr: arr) {
