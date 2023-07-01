@@ -28,6 +28,10 @@ public class Algorithms {
     }
 
     public static int[] findEvenNumbers2(int[] arr1, int[] arr2) {
+        if ((arr1 == null && arr2 == null) || (arr1.length == 0 && arr2.length == 0))
+        {
+            return new int[0];
+        }
         IntPredicate isEvenPred = num -> num % 2 == 0;
         return Stream.of(arr1, arr2)
                 .flatMapToInt(Arrays::stream)
