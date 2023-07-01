@@ -36,6 +36,7 @@ public class BinarySearchTree {
         if (val < root.data) {
             return contains(root.left, val);
         }
+        
 
         if (val > root.data) {
             return contains(root.right, val);
