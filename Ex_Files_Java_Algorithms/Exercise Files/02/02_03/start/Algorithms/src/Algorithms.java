@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Algorithms {
 
     public static boolean binarySearch(int[] arr, int item) {
-        if (arr.length == 0) {
+        if ( arr == null || arr.length == 0) {
             return false;
         }
 
