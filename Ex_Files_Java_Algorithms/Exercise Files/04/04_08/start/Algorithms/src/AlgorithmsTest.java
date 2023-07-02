@@ -4,6 +4,7 @@ class AlgorithmsTest {
 
     @org.junit.jupiter.api.Test
     void hasMatchingParentheses() {
+        // Arrange
         String testCaseOne = "((algorithm()))";
         String testCaseTwo = "()(algorithm())";
         String testCaseThree ="((algorithm))";
@@ -21,6 +22,7 @@ class AlgorithmsTest {
         String testCaseTwelve = "";
         String testCaseThirteen = null;
 
+        // Act
         boolean actualOne = Algorithms.hasMatchingParentheses(testCaseOne);
         boolean actualTwo = Algorithms.hasMatchingParentheses(testCaseTwo);
         boolean actualThree = Algorithms.hasMatchingParentheses(testCaseThree);
@@ -35,6 +37,7 @@ class AlgorithmsTest {
         boolean actualTwelve = Algorithms.hasMatchingParentheses(testCaseTwelve);
         boolean actualThirteen = Algorithms.hasMatchingParentheses(testCaseThirteen);
 
+        // Assert
         assertTrue(actualOne);
         assertTrue(actualTwo);
         assertTrue(actualThree);
@@ -59,12 +62,16 @@ class AlgorithmsTest {
         String testCaseThree ="((algorithm))";
         String testCaseFour ="(algorithm)";
 
-        String testCaseFive = "(algorithm(";
-        String testCaseSix =")algorithm)";
+        String testCaseFive = "())(algorithm(";
+        String testCaseSix =")algorithm)()";
         String testCaseSeven = ")algorithm(";
         String testCaseEight = "algorithm((";
-        String testCaseNine = "(algorithm";
-        String testCaseTen = "((algorithm)";
+        String testCaseNine = "(alg";
+        String testCaseTen = "((al)))";
+
+        String testCaseEvelen = " ";
+        String testCaseTwelve = "";
+        String testCaseThirteen = null;
 
         boolean actualOne = Algorithms.hasMatchingParentheses2(testCaseOne);
         boolean actualTwo = Algorithms.hasMatchingParentheses2(testCaseTwo);
@@ -76,6 +83,9 @@ class AlgorithmsTest {
         boolean actualEight = Algorithms.hasMatchingParentheses2(testCaseEight);
         boolean actualNine = Algorithms.hasMatchingParentheses2(testCaseNine);
         boolean actualTen = Algorithms.hasMatchingParentheses2(testCaseTen);
+        boolean actualEvelen = Algorithms.hasMatchingParentheses(testCaseEvelen);
+        boolean actualTwelve = Algorithms.hasMatchingParentheses(testCaseTwelve);
+        boolean actualThirteen = Algorithms.hasMatchingParentheses(testCaseThirteen);
 
         assertTrue(actualOne);
         assertTrue(actualTwo);
@@ -88,5 +98,8 @@ class AlgorithmsTest {
         assertFalse(actualEight);
         assertFalse(actualNine);
         assertFalse(actualTen);
+        assertFalse(actualEvelen);
+        assertFalse(actualTwelve);
+        assertFalse(actualThirteen);
     }
 }

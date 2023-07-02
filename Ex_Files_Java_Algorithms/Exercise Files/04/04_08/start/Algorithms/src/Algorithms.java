@@ -23,6 +23,9 @@ public class Algorithms {
     }
 
     public static boolean hasMatchingParentheses2(String s) {
+        if (s == null || s.isEmpty() || s.isBlank()) {
+            return false;
+        }
         int matchingSymbolTracker = 0;
 
         for (int i = 0; i < s.length(); i++) {
