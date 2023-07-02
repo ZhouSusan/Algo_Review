@@ -3,6 +3,9 @@ import java.util.Stack;
 public class Algorithms {
 
     public static boolean hasMatchingParentheses(String s) {
+        if (s == null || s.isEmpty() || s.isBlank()) {
+            return false;
+        }
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             char curr = s.charAt(i);

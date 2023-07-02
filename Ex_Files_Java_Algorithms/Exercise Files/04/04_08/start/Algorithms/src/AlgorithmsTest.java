@@ -9,12 +9,17 @@ class AlgorithmsTest {
         String testCaseThree ="((algorithm))";
         String testCaseFour ="(algorithm)";
 
+
         String testCaseFive = "(algorithm(";
         String testCaseSix =")algorithm)";
         String testCaseSeven = ")algorithm(";
         String testCaseEight = "algorithm((";
         String testCaseNine = "(algorithm";
         String testCaseTen = "((algorithm)";
+
+        String testCaseEvelen = ")";
+        String testCaseTwelve = "";
+        String testCaseThirteen = null;
 
         boolean actualOne = Algorithms.hasMatchingParentheses(testCaseOne);
         boolean actualTwo = Algorithms.hasMatchingParentheses(testCaseTwo);
@@ -26,6 +31,9 @@ class AlgorithmsTest {
         boolean actualEight = Algorithms.hasMatchingParentheses(testCaseEight);
         boolean actualNine = Algorithms.hasMatchingParentheses(testCaseNine);
         boolean actualTen = Algorithms.hasMatchingParentheses(testCaseTen);
+        boolean actualEvelen = Algorithms.hasMatchingParentheses(testCaseEvelen);
+        boolean actualTwelve = Algorithms.hasMatchingParentheses(testCaseTwelve);
+        boolean actualThirteen = Algorithms.hasMatchingParentheses(testCaseThirteen);
 
         assertTrue(actualOne);
         assertTrue(actualTwo);
@@ -39,6 +47,9 @@ class AlgorithmsTest {
         assertFalse(actualNine);
         assertFalse(actualTen);
 
+        assertFalse(actualEvelen);
+        assertFalse(actualTwelve);
+        assertFalse(actualThirteen);
     }
 
     @org.junit.jupiter.api.Test
