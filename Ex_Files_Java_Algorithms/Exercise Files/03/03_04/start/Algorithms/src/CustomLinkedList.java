@@ -11,6 +11,25 @@ public class CustomLinkedList {
         System.out.println();
     }
 
+    public int size() {
+        int length = 0;
+
+        if (isEmpty()) {
+            return 0;
+        }
+
+        Node current = head;
+        while (current != null) {
+            length += 1;
+            current = current.next;
+        }
+        return length;
+    }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
     public void deleteBackHalf() {
         if (head == null || head.next == null) {
             head = null;
