@@ -6,7 +6,8 @@ class CustomLinkedListTest {
     void hasCycle() {
 
         CustomLinkedList noCycleLinkedList = new CustomLinkedList();
-        // The list is initial empty
+
+        // The list is initial empty. So, there is no cycle.
         assertFalse(noCycleLinkedList.hasCycle());
 
         Node firstNode = new Node(3);
@@ -19,14 +20,14 @@ class CustomLinkedListTest {
         secondNode.next = thirdNode;
         thirdNode.next = fourthNode;
 
-        // the second call is 3->4->5->6-> null. Does not have a cycle.
+        // the second call also does not have a cycle: 3->4->5->6-> null.
         assertFalse(noCycleLinkedList.hasCycle());
 
         CustomLinkedList cycleLinkedList = new CustomLinkedList();
         cycleLinkedList.head = firstNode;
         thirdNode.next = secondNode;
 
-        // the third call has a cycle.
+        // the third call has a cycle
         assertTrue(noCycleLinkedList.hasCycle());
     }
 }
