@@ -1,8 +1,6 @@
 import java.util.HashMap;
 
 public class Algorithms {
-
-
     public static void displayFreqOfEachElement(int[] arr) {
        HashMap<Integer, Integer> freqMap = new HashMap<>();
        for (int x : arr) {
@@ -12,7 +10,6 @@ public class Algorithms {
                freqMap.put(x, freqMap.get(x) + 1);
            }
        }
-
        freqMap.forEach((key,  value) -> System.out.println(key + " : " + value));
     }
 
