@@ -3,6 +3,13 @@ end/
 *.idea
 *lib
 
+obj/
+packages/
+bin/
+.vscode/
+.vs/
+*.csproj
+
 # Logs
 logs
 *.log
