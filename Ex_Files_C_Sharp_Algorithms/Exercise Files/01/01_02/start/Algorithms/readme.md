@@ -1,0 +1,1 @@
+Algorithm that convert the string to lowercase, trim off the spaces and then remove the comma.

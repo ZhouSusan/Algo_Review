@@ -4,10 +4,15 @@ namespace Algorithms
 {
     class Program
     {
+        static string NormalizeString(String input)
+        {
+            return input.ToLower().Trim().Replace(",", "");
+
+        }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Console.WriteLine(NormalizeString("     Hello,, Wo,rld              "));
         }
     }
 }
