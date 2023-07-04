@@ -4,19 +4,18 @@ namespace Algorithms {
 
     class Program {
         static int findMaximum(int a, int b, int c) {
-            if (a > b) {
-                if (a > c || a == c) {
-                    return a;
-                }
+            int max = a;
+            if (b > max)
+            {
+                max = b;
             }
 
-            if (b > c) {
-                if (b > a || a == b) {
-                    return b;
-                }
+            if (c > max)
+            {
+                max = c;
             }
 
-            return c;
+            return max;
         }
 
         static void Main(string[] args) {
