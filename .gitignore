@@ -9,7 +9,7 @@ bin/
 .vscode/
 .vs/
 *.csproj
-.sln
+*.sln
 
 # Logs
 logs
