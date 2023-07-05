@@ -1,4 +1,4 @@
-Things that are covered:
+Chapter Objective:
 
 * Leverage validation, normalization, and/or search algorithms
 * Consider algorithms that dynamically create new data  
