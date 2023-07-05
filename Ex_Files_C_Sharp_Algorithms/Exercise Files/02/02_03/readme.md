@@ -1,0 +1,1 @@
+ A function that takes in two arrays, and return a new array with only the even values. 
