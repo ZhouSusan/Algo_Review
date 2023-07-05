@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Algorithms
 {
@@ -6,11 +7,27 @@ namespace Algorithms
     {
 
         static String ReverseEachWord(String input) {
-            return "";
+            if (string.IsNullOrEmpty(input) || input.Length == 1)
+            {
+                return input;
+            }
+
+            StringBuilder sb = new StringBuilder(input.Length);
+            string[] words = input.Split(" ");
+            for (int i = 0; i < words.Length; i++)
+            {
+                sb.Append(Reverse(words[i]));
+                if (i != input.Length-1)
+                {
+                    sb.Append(" ");
+                }
+            }
+
+            return sb.ToString();
         }
 
         static String Reverse(String input) {
-            if (string.IsNullOrEmpty(input)) {
+            if (string.IsNullOrEmpty(input) || input.Length == 1) {
                 return input;
             }
 
