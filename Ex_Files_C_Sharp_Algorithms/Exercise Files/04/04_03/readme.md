@@ -7,6 +7,7 @@ Example:
 The algorithm we create should generate as many of these numbers as we specify.
 If the input was 8, then the algorithm should print out one, one zero, one one, one zero zero, etc.
 If the input is less than or equal to zero, the algorithm should print out nothing.
+
 Input: N = 8  
 Output:
 
