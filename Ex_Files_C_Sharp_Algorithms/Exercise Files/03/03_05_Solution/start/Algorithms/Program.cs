@@ -17,6 +17,44 @@ namespace Algorithms {
             }
         }
 
+        public bool isEmpty()
+        {
+            return head == null;
+        }
+
+        public void deleteKthNodeFromEnd(int k)
+        {
+            if (isEmpty() || k == 0)
+            {
+                return;
+            }
+
+            Node slow = head;
+            Node fast = head;
+
+            for (int i = 0; i < k; i++)
+            {
+                fast = fast.next; 
+                if (fast.next == null)
+                {
+                    if (i == k- 1)
+                    {
+                        head = head.next;
+                    }
+                    return;
+                }
+            }
+
+            while (fast.next != null)
+            {
+                // WHne fast pointer reach end of the list, then slow pointer will be at the kth node
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            slow.next = slow.next.next;
+        }
+
         static void Main(string[] args) {
             CustomLinkedList linkedList = new CustomLinkedList();
             Node firstNode = new Node(3);
@@ -28,6 +66,9 @@ namespace Algorithms {
             firstNode.next = secondNode;
             secondNode.next = thirdNode;
             thirdNode.next = fourthNode;
+
+            linkedList.deleteKthNodeFromEnd(2);
+            linkedList.displayContents();
         }
     }
 }
