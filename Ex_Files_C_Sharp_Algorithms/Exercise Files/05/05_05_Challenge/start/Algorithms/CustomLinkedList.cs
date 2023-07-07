@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Algorithms {
     class CustomLinkedList {
@@ -16,7 +17,25 @@ namespace Algorithms {
         }
 
         public Boolean hasCycle() {
-          return false;
+            if (head == null) return false;
+
+            HashSet<Node> nodesAlreadySeen = new HashSet<Node>();
+            Node current = head;
+             
+            while (current != null)
+            {
+                if (!nodesAlreadySeen.Contains(current))
+                {
+                    nodesAlreadySeen.Add(current);
+                }
+                else
+                {
+                    return true;
+                }
+
+                current = current.next;
+            }
+            return false;
         }
 
         static void Main(string[] args) {

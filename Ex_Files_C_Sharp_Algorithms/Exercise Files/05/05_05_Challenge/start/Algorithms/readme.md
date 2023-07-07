@@ -1,0 +1,1 @@
+﻿Challenge: Create an algorithm that detects a cycle within a linked list.
