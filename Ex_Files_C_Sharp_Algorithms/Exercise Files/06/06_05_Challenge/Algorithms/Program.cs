@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Algorithms {
 
@@ -23,6 +24,28 @@ namespace Algorithms {
 
                 return root;
             }
+
+            public static bool Contains(Node root, int val)
+            {
+                if (root == null)
+                {
+                    return false;
+                }
+
+                if (root.Data == val)
+                {
+                    return true;
+                } 
+                else if (root.Data < val)
+                {
+                   return Contains(root.Right, val);
+                } 
+                else
+                {
+                   return Contains(root.Left, val);
+                }
+
+            }
         }
 
         static void Main(string[] args) {
@@ -34,6 +57,16 @@ namespace Algorithms {
             BinarySearchTree.Insert(rootNode, 5);
             BinarySearchTree.Insert(rootNode, 6);
             BinarySearchTree.Insert(rootNode, 4);
+
+            Console.WriteLine(BinarySearchTree.Contains(rootNode, 4));
+            Console.WriteLine(BinarySearchTree.Contains(rootNode, 2));
+            Console.WriteLine(BinarySearchTree.Contains(rootNode, 3));
+            Console.WriteLine(BinarySearchTree.Contains(rootNode, 5));
+            Console.WriteLine(BinarySearchTree.Contains(rootNode, 6));
+
+            Console.WriteLine(BinarySearchTree.Contains(rootNode, -1));
+            Console.WriteLine(BinarySearchTree.Contains(rootNode, 0));
+            Console.WriteLine(BinarySearchTree.Contains(null, 4));
         }
     }
 }
