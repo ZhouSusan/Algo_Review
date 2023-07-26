@@ -2,6 +2,7 @@ end/
 *.iml
 *.idea
 *lib
+*_finished.py
 
 obj/
 packages/
