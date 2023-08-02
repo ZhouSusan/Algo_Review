@@ -1,9 +1,9 @@
 public class Node {
     private int data;
-    private int next;
+    private Integer next;
     public Node(int data) {
         this.data = data;
-        this.next = Integer.parseInt(null);
+        this.next = null;
     }
 
     public void setData(int data) {
