@@ -3,6 +3,8 @@ end/
 *.idea
 *lib
 *_finished.py
+!**/src/main/**/out/
+!**/src/test/**/out/
 
 obj/
 packages/
