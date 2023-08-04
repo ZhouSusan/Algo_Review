@@ -1,6 +1,6 @@
 public class Node {
     private int data;
-    private Integer next;
+    private Node next;
     public Node(int data) {
         this.data = data;
         this.next = null;
@@ -14,11 +14,11 @@ public class Node {
         return this.data;
     }
 
-    public void setNext(int next) {
+    public void setNext(Node next) {
         this.next = next;
     }
 
-    public int next() {
+    public Node getNext() {
         return this.next;
     }
 }
