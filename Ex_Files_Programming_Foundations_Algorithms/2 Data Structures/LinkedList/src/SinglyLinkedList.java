@@ -30,13 +30,14 @@ public class SinglyLinkedList {
     }
 
     public void find(int val) {
+        boolean flag = false;
+
         if (isEmpty()) {
-            System.out.println("Value is not in this list");
+            System.out.println("Element is not present in the list");
         }
 
         Node current = this.head;
         int i =1;
-        boolean flag = false;
         while (current != null) {
             if (current.getData() == val) {
                 flag = true;
@@ -52,8 +53,6 @@ public class SinglyLinkedList {
         } else {
             System.out.println("Element is not present in the list");
         }
-        ;
-
     }
 
     public boolean isEmpty() {

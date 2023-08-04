@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
+        sll.find(38);
         sll.insert(38);
         sll.insert(39);
         sll.insert(13);
