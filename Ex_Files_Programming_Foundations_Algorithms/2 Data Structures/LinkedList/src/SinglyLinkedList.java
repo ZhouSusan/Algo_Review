@@ -34,6 +34,7 @@ public class SinglyLinkedList {
 
         if (isEmpty()) {
             System.out.println("Element is not present in the list");
+            return;
         }
 
         Node current = this.head;
@@ -53,6 +54,26 @@ public class SinglyLinkedList {
         } else {
             System.out.println("Element is not present in the list");
         }
+    }
+
+    public void deleteAt(int idx) {
+        if (isEmpty()) {
+            return;
+        }
+
+        Node temp = head;
+        if (idx == 0)
+        {
+            head = temp.getNext();
+            return;
+        }
+        for (int i=0; temp!=null && i<idx-1; i++)
+            temp = temp.getNext();
+        if (temp == null || temp.getNext() == null)
+            return;
+        Node next1 = temp.getNext().getNext();
+
+        temp.setNext(next1);
     }
 
     public boolean isEmpty() {
