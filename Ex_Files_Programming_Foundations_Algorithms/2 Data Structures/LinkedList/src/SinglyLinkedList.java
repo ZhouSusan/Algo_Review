@@ -56,7 +56,7 @@ public class SinglyLinkedList {
 
         Node curr = this.head;
         while (curr != null) {
-            System.out.printf("Node: %d", curr.getData());
+            System.out.printf("Node: %d\n", curr.getData());
 
             curr = curr.getNext();
         }
