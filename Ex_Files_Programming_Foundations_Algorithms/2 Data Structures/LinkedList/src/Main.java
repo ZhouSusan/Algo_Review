@@ -7,5 +7,6 @@ public class Main {
         sll.insert(15);
 
         System.out.printf("Item count: %d", sll.getCount());
+        sll.dumpList();
     }
 }

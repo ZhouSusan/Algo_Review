@@ -15,14 +15,50 @@ public class SinglyLinkedList {
 
         if (isEmpty()) {
             this.head = addThisNode;
+            this.count++;
+            return;
         }
 
-        addThisNode.setNext(this.head.getData());
-        this.head = addThisNode;
+        Node curr = this.head;
+        Node previous = this.head;
+        while (curr != null) {
+            previous = curr;
+            curr = curr.getNext();
+        }
+        previous.setNext(addThisNode);
         this.count++;
+    }
+
+    public Node find(int val) {
+        if (isEmpty()) {
+            return null;
+        }
+
+        Node current = this.head;
+        while (current != null) {
+            if (current.getData() == val) {
+                return current;
+            } else {
+              current = current.getNext();
+            }
+        }
+        return null;
     }
 
     public boolean isEmpty() {
         return this.head == null;
+    }
+
+    public void dumpList() {
+        if (isEmpty()) {
+            System.out.println("Your list is empty.");
+        }
+
+        Node curr = this.head;
+        while (curr != null) {
+            System.out.printf("Node: %d", curr.getData());
+
+            curr = curr.getNext();
+        }
     }
 }
