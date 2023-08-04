@@ -6,7 +6,12 @@ public class Main {
         sll.insert(13);
         sll.insert(15);
 
-        System.out.printf("Item count: %d", sll.getCount());
+        System.out.printf("Item count: %d\n", sll.getCount());
+        sll.find(38);
+        sll.find(13);
+        sll.find(15);
+        sll.find(78);
+        System.out.println();
         sll.dumpList();
     }
 }

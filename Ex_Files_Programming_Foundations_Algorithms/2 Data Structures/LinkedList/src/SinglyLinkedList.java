@@ -29,20 +29,31 @@ public class SinglyLinkedList {
         this.count++;
     }
 
-    public Node find(int val) {
+    public void find(int val) {
         if (isEmpty()) {
-            return null;
+            System.out.println("Value is not in this list");
         }
 
         Node current = this.head;
+        int i =1;
+        boolean flag = false;
         while (current != null) {
             if (current.getData() == val) {
-                return current;
+                flag = true;
+                break;
             } else {
-              current = current.getNext();
+                i++;
+                current = current.getNext();
             }
         }
-        return null;
+
+        if (flag) {
+            System.out.println("Element is present in the list at the position : " + i);
+        } else {
+            System.out.println("Element is not present in the list");
+        }
+        ;
+
     }
 
     public boolean isEmpty() {
