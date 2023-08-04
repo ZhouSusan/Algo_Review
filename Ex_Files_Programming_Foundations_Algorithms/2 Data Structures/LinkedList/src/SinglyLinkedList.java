@@ -10,7 +10,7 @@ public class SinglyLinkedList {
         return this.count;
     }
 
-    public void insertNode(int data) {
+    public void insert(int data) {
         Node addThisNode = new Node(data);
 
         if (isEmpty()) {
