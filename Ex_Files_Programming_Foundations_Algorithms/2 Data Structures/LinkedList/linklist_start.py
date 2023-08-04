@@ -1,6 +1,5 @@
 # Linked list example
 
-
 # the Node class
 class Node(object):
     def __init__(self, val):
@@ -30,19 +29,33 @@ class LinkedList(object):
         return self.count
 
     def insert(self, data):
-        # TODO: insert a new node
         new_node = Node(data)
+        new_node.set_next(self.head)
+        self.head = new_node
+        self.count += 1
 
     def find(self, val):
-        # TODO: find the first item with a given value
         item = self.head
-
+        while (item != None):
+            if item.get_data() == val:
+                return item
+            else:
+                item = item.get_next()
         return None
 
     def deleteAt(self, idx):
-        # TODO: delete an item at given index
-        if idx > self.count-1:
+        if idx > self.count:
             return
+        if self.head == None:
+            return
+        else:
+            tempIdx = 0
+            node = self.head
+            while tempIdx < idx-1:
+                node = node.get_next()
+                tempIdx += 1
+            node.set_next(node.get_next().get_next())
+            self.count -= 1
 
     def dump_list(self):
         tempnode = self.head
