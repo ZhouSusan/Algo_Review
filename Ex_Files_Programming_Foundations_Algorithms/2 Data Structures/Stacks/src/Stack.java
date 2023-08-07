@@ -14,9 +14,12 @@ public class Stack {
 
         // pop an item off the stack
         newStack.pop();
-        newStack.pop();
-        newStack.pop();
-        newStack.pop();
+        System.out.println();
+        newStack.forEach(System.out::println);
 
+        newStack.pop();
+        newStack.pop();
+        System.out.println();
+        newStack.forEach(System.out::println);
     }
 }
