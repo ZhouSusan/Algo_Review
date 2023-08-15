@@ -16,9 +16,11 @@ public class Searching {
         return -1;
     }
 
-    // searching for an item in an ordered list
-    //# this technique uses a binary search
-
+    /**
+     * @param arr - ordered array
+     * @param item - searching for an item in an ordered array
+     * @return - index if item exist or -1
+     */
     public static int binarySearch(int[] arr, int item) {
         if (arr == null || arr.length == 0) {
             return -1;
