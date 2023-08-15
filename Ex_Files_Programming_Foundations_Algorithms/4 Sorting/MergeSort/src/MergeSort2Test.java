@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MergeSort2Test {
 
     @Test
-    void merge() {
+    void mergeTest() {
         // Arrange
         int[] arr1 = new int[] {-2, 0, 1};
         int[] arr2 = new int[] {-9, 45, 8};
@@ -20,7 +20,7 @@ class MergeSort2Test {
     }
 
     @Test
-    void mergeSort() {
+    void mergeSortTest() {
         // Arrange
         int[] testCaseOne = new int[] {-9, -2, 0, 1, 45, 8 };
         int[] testCaseTwo = new int[] {1};
