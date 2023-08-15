@@ -6,7 +6,7 @@ public class Searching {
      * @return - index if item exist or -1
      */
     //
-    public static int LinearSearch(int[] arr, int item) {
+    public static int linearSearch(int[] arr, int item) {
 
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == item) {
@@ -15,9 +15,10 @@ public class Searching {
         }
         return -1;
     }
+    
     public static void main(String[] args) {
         int[] itemArr = new int[] {6, 20, 8, 19, 56, 23, 87, 41, 49, 53};
-        System.out.println(LinearSearch(itemArr, 87));
-        System.out.println(LinearSearch(itemArr, 250));
+        System.out.println(linearSearch(itemArr, 87));
+        System.out.println(linearSearch(itemArr, 250));
     }
 }

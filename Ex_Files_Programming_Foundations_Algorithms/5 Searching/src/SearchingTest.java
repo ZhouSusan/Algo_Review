@@ -12,9 +12,9 @@ class SearchingTest {
 
 
         // Act
-        int actualOne = Searching.LinearSearch(testCaseOne, 41);
-        int actualTwo = Searching.LinearSearch(testCaseOne, 20);
-        int actualThree = Searching.LinearSearch(testCaseOne, 100);
+        int actualOne = Searching.linearSearch(testCaseOne, 41);
+        int actualTwo = Searching.linearSearch(testCaseOne, 20);
+        int actualThree = Searching.linearSearch(testCaseOne, 100);
 
         // Assert
         assertEquals(expectedOne, actualOne);
