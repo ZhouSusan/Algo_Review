@@ -44,6 +44,28 @@ public class Searching {
         return -1;
     }
 
+    /**
+     * @param arr - an array
+     * @return - boolean if the input array is sorted or not
+     */
+    public static boolean is_sorted(int[] arr) {
+        if (arr == null) {
+            return false;
+        }
+
+        if (arr.length < 2) {
+            return true;
+        }
+
+        for (int i = 0; i < arr.length-1; i++) {
+            if (arr[i] > arr[i+1]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
         int[] itemArr = new int[] {6, 20, 8, 19, 56, 23, 87, 41, 49, 53};
         System.out.println(linearSearch(itemArr, 87));
@@ -53,5 +75,8 @@ public class Searching {
         System.out.println(binarySearch(itemArr2, 67));
         System.out.println(binarySearch(itemArr2, 81));
         System.out.println(binarySearch(itemArr2, 41));
+
+        System.out.println(is_sorted(itemArr));
+        System.out.println(is_sorted(itemArr2));
     }
 }

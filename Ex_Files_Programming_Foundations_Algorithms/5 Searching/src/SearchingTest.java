@@ -64,4 +64,38 @@ class SearchingTest {
         assertEquals(expectedSeven, actualSeven);
         assertEquals(expectedEight, actualEight);
     }
+
+    @org.junit.jupiter.api.Test
+    void is_sortedTest() {
+        // Arrange
+        int[] testCaseOne = {-4, -5, -7, -8, -9};
+        int[] testCaseTwo = {0};
+        int[] testCaseThree = {20, 40, 60, 3, 14, 89};
+        int[] testCaseFour = {-18, -9, 0, 3, 32, 44, 56};
+        int[] testCaseFive = null;
+        int[] testCaseSix = {};
+
+        boolean expectedOne = false;
+        boolean expectedTwo = true;
+        boolean expectedThree = false;
+        boolean expectedFour = true;
+        boolean expectedFive = false;
+        boolean expectedSix = true;
+
+        // Act
+        boolean actualOne = Searching.is_sorted(testCaseOne);
+        boolean actualTwo = Searching.is_sorted(testCaseTwo);
+        boolean actualThree = Searching.is_sorted(testCaseThree);
+        boolean actualFour = Searching.is_sorted(testCaseFour);
+        boolean actualFive = Searching.is_sorted(testCaseFive);
+        boolean actualSix = Searching.is_sorted(testCaseSix);
+
+        // Assert
+        assertEquals(expectedOne, actualOne);
+        assertEquals(expectedTwo, actualTwo);
+        assertEquals(expectedThree, actualThree);
+        assertEquals(expectedFour, actualFour);
+        assertEquals(expectedFive, actualFive);
+        assertEquals(expectedSix, actualSix);
+    }
 }
