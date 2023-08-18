@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.Hashtable;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -78,5 +79,43 @@ class HashtableTest {
 
         assertNotNull(actualFive);
         assertTrue(actualFive.size() == 0);
+    }
+
+    @org.junit.jupiter.api.Test
+    void filterDuplicatesTest() {
+        // Arrange
+        String[] testcaseOne = {"apple", "pear", "orange", "banana", "apple",
+                "orange", "apple", "pear", "banana", "orange",
+                "apple", "kiwi", "pear", "apple", "orange"};
+        String[] testcaseTwo = {};
+        String[] testcaseThree = null;
+        String[] testcaseFour = {"Four", "Four", "Four", "Four", "Four"};
+
+        // Act
+        HashSet<String> actualOne = Main.filterDuplicates(testcaseOne);
+        HashSet<String> actualTwo = Main.filterDuplicates(testcaseTwo);
+        HashSet<String> actualThree = Main.filterDuplicates(testcaseThree);
+        HashSet<String> actualFour = Main.filterDuplicates(testcaseFour);
+
+        // Assert
+        assertNotNull(actualOne);
+        assertTrue(actualOne.contains("apple"));
+        assertTrue(actualOne.contains("pear"));
+        assertTrue(actualOne.contains("banana"));
+        assertTrue(actualOne.contains("orange"));
+        assertTrue(actualOne.contains("kiwi"));
+        assertTrue(actualOne.size() == 5);
+
+        assertNotNull(actualTwo);
+        assertTrue(actualTwo.isEmpty());
+        assertTrue(actualTwo.size() == 0);
+
+        assertNotNull(actualThree);
+        assertTrue(actualThree.isEmpty());
+        assertTrue(actualThree.size() == 0);
+
+        assertNotNull(actualFour);
+        assertTrue(actualFour.contains("Four"));
+        assertTrue(actualFour.size() == 1);
     }
 }
