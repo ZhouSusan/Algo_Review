@@ -145,3 +145,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 Ex_Files_C_Sharp_Algorithms/Exercise Files/02/02_02/BinarySearch/BinarySearch.sln
+packages.config*
