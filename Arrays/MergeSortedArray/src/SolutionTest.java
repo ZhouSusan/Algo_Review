@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SolutionTest {
 
     @org.junit.jupiter.api.Test
-    void mergeTest() {
+    void merge2Test() {
         // Arrange
 
         // testcase 1
@@ -40,10 +40,10 @@ class SolutionTest {
         assertEquals(8, nums7.length);
 
         // Act
-        Solution.merge(nums1, m1, nums2, n1);
-        Solution.merge(nums3, m2, nums4, n2);
-        Solution.merge(nums5, m3, nums6, n3);
-        Solution.merge(nums7, m4, nums8, n4);
+        Solution.merge2(nums1, m1, nums2, n1);
+        Solution.merge2(nums3, m2, nums4, n2);
+        Solution.merge2(nums5, m3, nums6, n3);
+        Solution.merge2(nums7, m4, nums8, n4);
 
         // Assert
         assertArrayEquals(expected1, nums1);
