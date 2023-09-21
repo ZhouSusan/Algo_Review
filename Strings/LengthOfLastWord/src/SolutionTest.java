@@ -23,6 +23,12 @@ class SolutionTest {
         String testCase6 = " ";
         int expected6 = 0;
 
+        String testCase7 = "                            ";
+        int expected7 = 0;
+
+        String testCase8 = "          a       b      c d    ";
+        int expected8 = 1;
+
         // Act
         int actual1 = Solution.lengthOfLastWord(testCase1);
         int actual2 = Solution.lengthOfLastWord(testCase2);
@@ -30,6 +36,8 @@ class SolutionTest {
         int actual4 = Solution.lengthOfLastWord(testCase4);
         int actual5 = Solution.lengthOfLastWord(testCase5);
         int actual6 = Solution.lengthOfLastWord(testCase6);
+        int actual7 = Solution.lengthOfLastWord(testCase7);
+        int actual8 = Solution.lengthOfLastWord(testCase8);
 
         // Assert
         assertEquals(expected1, actual1);
@@ -38,5 +46,7 @@ class SolutionTest {
         assertEquals(expected4, actual4);
         assertEquals(expected5, actual5);
         assertEquals(expected6, actual6);
+        assertEquals(expected7, actual7);
+        assertEquals(expected8, actual8);
     }
 }
