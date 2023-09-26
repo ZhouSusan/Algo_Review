@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SolutionTest {
 
     @org.junit.jupiter.api.Test
-    void addBinaryTest() {
+    void addBinary() {
         // Arrange
         String a1 = "11", b1 = "1";
         String expected1 = "100";
