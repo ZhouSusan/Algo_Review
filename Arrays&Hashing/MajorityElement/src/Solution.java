@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Solution {
     /**
      * Finding the majority element from a given array.
-     * @param nums<Integer> - an array of numbers, ranging from [-1000000000, 1000000000]
+     * @param nums<Integer> - an array of numbers, where nums[i] can range from [-1000000000, 1000000001]
      * @return integer - the majority element of nums
      */
     public static int majorityElement(int[] nums) {
