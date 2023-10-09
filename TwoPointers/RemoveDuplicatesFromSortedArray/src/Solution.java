@@ -11,13 +11,12 @@ public class Solution {
         }
 
         int j = 1;
-        for (int i = 1; i < nums.length-1; i++) {
+        for (int i = 1; i < nums.length; i++) {
             if(nums[i] != nums[i-1]) {
                 nums[j++] = nums[i];
             }
         }
 
-        nums[j++] = nums[nums.length-1];
         return j;
     }
     public static void main(String[] args) {
