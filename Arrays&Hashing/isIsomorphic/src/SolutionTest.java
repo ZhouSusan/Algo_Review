@@ -17,10 +17,10 @@ class SolutionTest {
         String s4 = "same", t4 = "same";
         boolean expected4 = true;
 
-        String s5 = "pear", t5 = "pears";
+        String s5 = "pearr", t5 = "pears";
         boolean expected5 = false;
 
-        String s6 = "a", t6 = "ee";
+        String s6 = "ae", t6 = "ee";
         boolean expected6 = false;
 
         String s7 = "p", t7 = "t";

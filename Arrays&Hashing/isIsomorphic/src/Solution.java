@@ -8,33 +8,21 @@ public class Solution {
      * @return boolean - if s and t are isomorphic strings
      */
     public static boolean isIsomorphic(String s, String t) {
-        if(s.length() != t.length()) {
-            return false;
-        }
+        HashMap<Character, Character> sMap = new HashMap<>();
+        HashMap<Character, Character> tMap = new HashMap<>();
 
-        if(s.equals(t)) {
-            return true;
-        }
+        for (int i = 0; i < s.length(); i++) {
+            Character sCurrentChar = s.charAt(i);
+            Character tCurrentChar = t.charAt(i);
 
-        HashMap<Character, Character> letterMap = new HashMap<>();
-
-        for(int i = 0; i < s.length(); i++) {
-            char sChar = s.charAt(i);
-            char tChar = t.charAt(i);
-
-            if(letterMap.containsKey(sChar)) {
-                if (letterMap.get(sChar) != tChar) {
-                    return false;
-                }
-            } else {
-                if(letterMap.containsValue(tChar)) {
-                    return false;
-                }
-
-                letterMap.put(sChar, tChar);
+            if (sMap.containsKey(sCurrentChar) && sMap.get(sCurrentChar) != tCurrentChar ||
+                    tMap.containsKey(tCurrentChar) && tMap.get(tCurrentChar) != sCurrentChar) {
+                return false;
             }
-        }
 
+            sMap.put(sCurrentChar, tCurrentChar);
+            tMap.put(tCurrentChar, sCurrentChar);
+        }
         return true;
     }
     public static void main(String[] args) {
