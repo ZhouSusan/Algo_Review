@@ -14,10 +14,10 @@ class SolutionTest {
         int[] testcase3 = {7, 0, -7, 0, -13, 0, 0, 13, 16};
         int[] expected3 = {7, -7, -13, 13, 16, 0, 0, 0, 0};
 
-        int[] testcase4 = {0, 0, 0, 0};
-        int[] expected4 = {0, 0, 0, 0};
+        int[] testcase4 = {0, 0, 0, 1};
+        int[] expected4 = {1, 0, 0, 0};
 
-        int[] testcase5 = {7, 0};
+        int[] testcase5 = {0, 7};
         int[] expected5 = {7, 0};
 
         int[] testcase6 = {0};
