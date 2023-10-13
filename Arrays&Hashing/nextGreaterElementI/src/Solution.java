@@ -3,11 +3,11 @@ import java.util.Stack;
 
 public class Solution {
     /**
-     * For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1.
-     * Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.
+     * For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2.
+     * If there is no next greater element, then the answer for this query is -1.
      * @param nums1<Integer> - nums1 is a subset of nums2
      * @param nums2<Integer> - an integer array, where all the integers are unique.
-     * @return int[] - an array of integers that is the same length of nums1
+     * @return int[] - an integer array, ans, that is the same length as nums1, and ans[i] is the next greater element
      */
     public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int[] nextGreaterElems = new int[nums1.length];
