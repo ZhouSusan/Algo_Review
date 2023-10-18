@@ -11,21 +11,40 @@ public class Solution {
             return new int[] {-1, -1};
         }
 
-        int startIdx = -1;
-        int lastIdx = -1;
+        return  new int[] {binarySearch(nums, target, true), binarySearch(nums, target, false)};
+    }
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == target) {
-                if (startIdx == -1) {
-                    startIdx = i;
+    /**
+     * Function that searches for target in nums.
+     * @param nums -  a sorted array in non-decreasing order
+     * @param target - an integer
+     * @param checkingLeft - boolean, whether we are checking the left
+     * @return int - index if target exist or -1
+     */
+    public static int binarySearch(int[] nums, int target, boolean checkingLeft) {
+        int low = 0;
+        int high = nums.length-1;
+        int mid;
+        int idx = -1;
+
+        while(low <= high) {
+            mid = low + (high-low)/2;
+            if(target < nums[mid]) {
+                high = mid -1;
+            } else if (target > nums[mid]) {
+                low = mid + 1;
+            } else {
+                idx = mid;
+                if (checkingLeft) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
                 }
-
-                lastIdx = i;
             }
         }
-
-        return  new int[] {startIdx,lastIdx};
+        return idx;
     }
+
     public static void main(String[] args) {
         int[] nums = {5,7,7,8,8,10};
         int target = 7;

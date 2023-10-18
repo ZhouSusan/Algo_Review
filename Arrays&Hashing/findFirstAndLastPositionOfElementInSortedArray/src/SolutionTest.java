@@ -79,4 +79,54 @@ class SolutionTest {
         assertEquals(2, actual8.length);
         assertArrayEquals(expected8, actual8);
     }
+
+    @org.junit.jupiter.api.Test
+    void binarySearch() {
+        int[] testCase1 = {-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-5,0,1,2,3,4};
+        int target1 = -10;
+        int expected1 = 0; // starting position of a given value target
+        int expected2 = 10; // last position of a given value target
+
+        int[] testCase2 = {-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-5,0,1,2,3,4};
+        int target2 = 0;
+        int expected3 = 12; // starting position of a given value target
+        int expected4 = 12; // last position of a given value target
+
+        int[] testCase3 = {-20,-20,-9,-6,-6,-3,-2,-2,-2,-2,-2,-2,-1};
+        int target3 = -2;
+        int expected5 = 6; // starting position of a given value target
+        int expected6 = 11; // last position of a given value target
+
+        int[] testCase4 = {0,1};
+        int target4 = 2;
+        int expected7 = -1; // starting position of a given value target
+        int expected8 = -1; // last position of a given value target
+
+        int[] testCase5 = {1};
+        int target5 = 1;
+        int expected9 = 0; // starting position of a given value target
+        int expected10 = 0; // last position of a given value target
+
+        int actual1 = Solution.binarySearch(testCase1, target1, true);
+        int actual2 = Solution.binarySearch(testCase1, target1, false);
+        int actual3 = Solution.binarySearch(testCase2, target2, true);
+        int actual4 = Solution.binarySearch(testCase2, target2, false);
+        int actual5 = Solution.binarySearch(testCase3, target3, true);
+        int actual6 = Solution.binarySearch(testCase3, target3, false);
+        int actual7 = Solution.binarySearch(testCase4, target4, true);
+        int actual8 = Solution.binarySearch(testCase4, target4, false);
+        int actual9 = Solution.binarySearch(testCase5, target5, true);
+        int actual10 = Solution.binarySearch(testCase5, target5, false);
+
+        assertEquals(expected1, actual1);
+        assertEquals(expected2, actual2);
+        assertEquals(expected3, actual3);
+        assertEquals(expected4, actual4);
+        assertEquals(expected5, actual5);
+        assertEquals(expected6, actual6);
+        assertEquals(expected7, actual7);
+        assertEquals(expected8, actual8);
+        assertEquals(expected9, actual9);
+        assertEquals(expected10, actual10);
+    }
 }
