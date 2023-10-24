@@ -28,10 +28,46 @@ public class Solution {
             end--;
         }
     }
+
+    public static void rotate2(int[] nums, int k) {
+        k %= nums.length;
+        int low = 0, high = nums.length-1;
+        while(low <= high) {
+            int temp = nums[low];
+            nums[low] = nums[high];
+            nums[high] = temp;
+
+            low++;
+            high--;
+        }
+
+        low = 0;
+        high = k-1;
+        while(low <= high) {
+            int temp = nums[low];
+            nums[low] = nums[high];
+            nums[high] = temp;
+
+            low++;
+            high--;
+        }
+
+        low = k;
+        high = nums.length-1;
+        while(low <= high) {
+            int temp = nums[low];
+            nums[low] = nums[high];
+            nums[high] = temp;
+
+            low++;
+            high--;
+        }
+    }
+
     public static void main(String[] args) {
         int[] nums = {1,-100,3,99};
         int k = 2;
-        rotate(nums, k);
+        rotate2(nums, k);
 
         for (int num: nums) {
             System.out.println(num);

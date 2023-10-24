@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SolutionTest {
 
     @org.junit.jupiter.api.Test
-    void rotate() {
+    void rotate2() {
         // Arrange
         int[] testCase1 = {1,2,3,4,5,6,7};
         int k1 = 3;
@@ -42,15 +42,15 @@ class SolutionTest {
         int[] expected9 = {1,2,3,4,5,6,7,8};
 
         // Act
-        Solution.rotate(testCase1, k1);
-        Solution.rotate(testCase2, k2);
-        Solution.rotate(testCase3, k3);
-        Solution.rotate(testCase4, k4);
-        Solution.rotate(testCase5, k5);
-        Solution.rotate(testCase6, k6);
-        Solution.rotate(testCase7, k7);
-        Solution.rotate(testCase8, k8);
-        Solution.rotate(testCase9, k9);
+        Solution.rotate2(testCase1, k1);
+        Solution.rotate2(testCase2, k2);
+        Solution.rotate2(testCase3, k3);
+        Solution.rotate2(testCase4, k4);
+        Solution.rotate2(testCase5, k5);
+        Solution.rotate2(testCase6, k6);
+        Solution.rotate2(testCase7, k7);
+        Solution.rotate2(testCase8, k8);
+        Solution.rotate2(testCase9, k9);
 
         // Assert
         assertArrayEquals(expected1, testCase1);
