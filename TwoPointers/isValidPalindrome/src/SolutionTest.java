@@ -11,10 +11,10 @@ class SolutionTest {
         String testCase2 = "Delia saw I was ailed.";
         boolean expected2 = true;
 
-        String testCase3 = "race a car";
+        String testCase3 = "r a,ce A c?a/r!";
         boolean expected3 = false;
 
-        String testCase4 = "rac0e! .0 car";
+        String testCase4 = "R a,c#E  % c?a/r!";
         boolean expected4 = true;
 
         String testCase5 = "r0";

@@ -5,14 +5,23 @@ public class Solution {
      * @return boolean - whether if the string is a palindrome
      */
     public static boolean isPalindrome(String s) {
-        if(s.length() == 1) return true;
+        if (s.length() == 1) return true;
 
-        String regexS = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         int low = 0;
-        int high = regexS.length()-1;
+        int high = s.length()-1;
 
-        while(low <= high) {
-            if(regexS.charAt(low) != regexS.charAt(high)) {
+        while (low <= high) {
+            if (!Character.isLetterOrDigit(s.charAt(low))) {
+                low++;
+                continue;
+            }
+
+            if (!Character.isLetterOrDigit(s.charAt(high))) {
+                high--;
+                continue;
+            }
+
+            if (Character.toLowerCase(s.charAt(low)) != Character.toLowerCase(s.charAt(high))) {
                 return false;
             }
 
@@ -23,7 +32,7 @@ public class Solution {
         return true;
     }
     public static void main(String[] args) {
-        String s = "race a car";
+        String s = "A man, a plan, a canal: Panama";
         System.out.println(isPalindrome(s));
     }
 }
