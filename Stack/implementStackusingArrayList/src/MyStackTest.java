@@ -74,18 +74,43 @@ class MyStackTest {
         testCase3.push(11);
         testCase3.push(12);
         int expected1 = 12;
-        int actual1 = 12;
+        int actual1 = testCase3.top();
 
-        assertTrue(expected1 == actual1);
+       assertEquals(expected1, actual1);
 
         testCase3.push(13);
         testCase3.push(14);
         testCase3.push(15);
 
         int expected2 = 15;
-        int actual2 = 15;
+        int actual2 = testCase3.top();
+        assertEquals(expected2, actual2);
 
-        assertTrue(expected2 == actual2);
+        testCase3.pop();
+        int expected3 = 14;
+        int actual3 = testCase3.top();
+        assertEquals(expected3, actual3);
+
+        testCase3.pop();
+        int expected4 = 13;
+        int actual4 = testCase3.top();
+        assertEquals(expected4, actual4);
+
+        testCase3.pop();
+        int expected5 = 12;
+        int actual5 = testCase3.top();
+        assertEquals(expected5, actual5);
+
+        testCase3.pop();
+        int expected6 = 11;
+        int actual6 = testCase3.top();
+        assertEquals(expected6, actual6);
+
+        testCase3.pop();
+        int expected7 = -1;
+        int actual7 = testCase3.top();
+        assertEquals(expected7, actual7);
+        assertEquals(true, testCase3.empty());
     }
 
     @org.junit.jupiter.api.Test
