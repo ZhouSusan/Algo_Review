@@ -19,4 +19,5 @@ public class Solution {
         int n2 = 15;
         System.out.println(isPowerOfTwo(n2));
     }
+
 }
