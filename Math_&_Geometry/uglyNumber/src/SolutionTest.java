@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SolutionTest {
 
     @org.junit.jupiter.api.Test
-    void isUgly() {
+    void isUgly2() {
         // Arrange
         int testCase1 = 6;
         boolean expected1 = true;
