@@ -10,6 +10,10 @@ public class Solution {
      */
     public static String findDay(int month, int day, int year) {
         LocalDate date = LocalDate.of(year, month, day);
+        int yearDate = date.getYear();
+        if ((yearDate < 2000) || (yearDate > 3000)) {
+            throw new Error("INVALID DATE");
+        }
         String dayOfWeek = date.getDayOfWeek().toString();
         return dayOfWeek;
     }
