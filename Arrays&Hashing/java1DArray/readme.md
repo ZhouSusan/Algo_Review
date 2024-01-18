@@ -29,17 +29,17 @@ It's important to note that while Java initializes each cell of an array of inte
 
 The code in your editor does the following:
 1. Reads an integer from stdin and saves it to a variable, `n`, denoting some number of integers.
-2. Reads `n` integers corresponding to a0, a1, ...., a(n-1) from stdin and saves each integer ai to a variable, val.
+2. Reads `n` integers corresponding to a[0], a[1], ...., a[n-1] from stdin and saves each integer a[i] to a variable, `val`.
 3. Attempts to print each element of an array of integers named `a`.
 
 Write the following code in the unlocked portion of your editor:
 1. Create an array, `a`, capable of holding `n` integers.
-2. Modify the code in the loop so that it saves each sequential value to its corresponding location in the array. For example, the first value must be stored in a0, the second value must be stored in a1, and so on.
+2. Modify the code in the loop so that it saves each sequential value to its corresponding location in the array. For example, the first value must be stored in a[0], the second value must be stored in a[1], and so on.
 
 **Input Format**
 
 The first line contains a single integer, `n`, denoting the size of the array.
-Each line `i` of the `n` subsequent lines contains a single integer denoting the value of element ai.
+Each line `i` of the `n` subsequent lines contains a single integer denoting the value of element a[i].
 
 **Output Format**
 
