@@ -1,4 +1,4 @@
-## Java Primality Test
+## [Java Primality Test](https://www.hackerrank.com/challenges/java-primality-test/problem)
 
 A prime number is a natural number greater than  whose only positive divisors are 1 and itself. 
 For example, the first six prime numbers are 2, 3, 5, 7, 11, and 13.
