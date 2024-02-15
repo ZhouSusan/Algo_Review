@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        int length =sc.nextInt();
-        String []s=new String[length];
+        Scanner sc = new Scanner(System.in);
+        int length = sc.nextInt();
+        String[] numStringsArr = new String[length];
 
-        for(int i=0;i<length;i++)
+        for(int i=0; i<length ;i++)
         {
-            s[i] = sc.next();
+            numStringsArr[i] = sc.next();
         }
 
-        Arrays.sort(s, new Comparator<Object>() {
+        Arrays.sort(numStringsArr, new Comparator<Object>() {
 
             public int compare(Object s1, Object s2) {
                 BigDecimal bd1 = new BigDecimal((String)s1);
@@ -23,9 +23,10 @@ public class Solution {
             }
         });
 
-        for(int i=0;i<length;i++)
-        {
-            System.out.println(s[i]);
+        for (String str : numStringsArr) {
+            System.out.println(str);
         }
+
+        sc.close();
     }
 }
